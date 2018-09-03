@@ -6,7 +6,7 @@ A web application geared towards the dedicated runner.  The focus will be on rec
 
 ### Wave 1 (Basic input and review)
 * User account creation and login
-    * Use Oauth, native or both?
+    * Native authentication
 * Manually record a new run and store it in the database
     * Need a smart input for the time input that accepts many styles (`14:44` and `14 44` should both be recorded as 14 minutes and 44 seconds)
     * Distance can be in kilometers or miles
@@ -28,16 +28,41 @@ A web application geared towards the dedicated runner.  The focus will be on rec
 ### Wave 3 (Way to download data)
 * Nothing is worse than when the site where you recorded your workouts for the past 4 years goes down without notice without a way to get your data (I'm still bitter about it) so instead Open Running will provide a way to download a CSV of all past data
 
-### Wave 3 (Analytics and goals)
+### Wave 4 (Analytics and goals)
 * Set mileage goals
     * View miles left for the current week to meet the mileage goal
 * Basic data analysis over longer term
     * Show percentage increase or decrease in distance per week
     * Show percentage increase or decrease in pace
 
-### Wave 4 (Social)
+### Wave 5 (Oauth support)
+* Add Oauth support for several providers
+
+### Wave 6 (Social)
 * Let users share data
 * Add a group run to various accounts (need a good process for this)
+
+
+## Wire Frames
+
+### Login and registration
+### Log new run
+### View past run
+
+## React
+
+
+
+### State
+```javascript
+{
+    loggedIn: true,
+    user: {
+
+    }
+}
+```
+
 
 ## Data Model
 
@@ -50,11 +75,33 @@ A web application geared towards the dedicated runner.  The focus will be on rec
 * Total distance
     * Need to decide on unit (km vs mile)
 
+## JSON APIs
+
+### Account Management
+#### Registration
+
+#### Sign In
+
+#### Get Current User
+
+
+
+
+
+
 ## Technologies
 
-* Database: MySQL
-* Express.js?
-* React.js?
-* UI framework?
+* Database: MySQL (https://dev.mysql.com/doc/)
+* ORM: Sequelize (http://docs.sequelizejs.com/)
+* Backend server: Express.js (https://expressjs.com/en/api.html)
+* Frontend: React.js (https://reactjs.org/docs/getting-started.html)
+* Wireframing: Axure (https://www.axure.com/support)
+
+TBD:
+* Internationalization with React-Intl?
+* UI framework: fabric?
+* Project planning application?
+* Testing application?
+* Wireframing application?
 
 
