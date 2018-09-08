@@ -31,6 +31,8 @@ Object.keys(db).forEach(modelName => {
   }
 });
 
+db.Run.belongsTo(db.User, {as: "user"});
+
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 

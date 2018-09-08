@@ -12,7 +12,7 @@ const deserializeUser = (savedId, done) => {
 }
 
 module.exports = (app) => {
-    passport.use(strategy);
+    passport.use(localStrategy);
     passport.serializeUser(serializeUser);
     passport.deserializeUser(deserializeUser);
     app.use(session);
