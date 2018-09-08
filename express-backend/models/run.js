@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
         },
         date: {
             type: DataTypes.DATE,
-            allowNull: false
+            defaultValue: sequelize.NOW
         },
         distance: {
             type: DataTypes.DECIMAL(5, 2),
